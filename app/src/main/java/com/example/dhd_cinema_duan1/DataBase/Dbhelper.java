@@ -15,6 +15,10 @@ public class Dbhelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL("create table anh(\n" +
+                "      ID_ND integer primary key autoincrement,\n" +
+                "      anh text not null)");
+
         db.execSQL("create table NguoiDung(\n" +
                 "      ID_ND integer primary key autoincrement,\n" +
                 "      TenDangNhap TEXT not null,\n" +
